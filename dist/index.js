@@ -344,12 +344,6 @@ Component = _react2.default.createClass({
         }
     },
 
-    containerClick: function containerClick(e) {
-        if (this.hasClass(e.target, this.props.className)) {
-            this.onClose();
-        }
-    },
-
     render: function render() {
         var className = this.props.className,
             box,
@@ -398,12 +392,12 @@ Component = _react2.default.createClass({
         }
 
         if (this.state.noOverlay) {
-            overlayStyle.background = 'transparent';
+            overlayStyle.display = 'none';
         }
 
         return _react2.default.createElement(
             'div',
-            { onClick: this.containerClick, className: className, style: overlayStyle },
+            { className: className, style: overlayStyle },
             box
         );
     }
