@@ -392,7 +392,7 @@ Component = _react2.default.createClass({
         }
 
         if (this.state.noOverlay) {
-            overlayStyle.display = 'none';
+            overlayStyle.background = 'transparent';
         }
 
         return _react2.default.createElement(
